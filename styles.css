@@ -248,7 +248,7 @@ h1, h2, h3, h4 {
     padding-right: 2rem;
 }
 
-/* .load {
+.load {
     position: fixed;
     top: 0;
     left: 0;
@@ -265,7 +265,7 @@ h1, h2, h3, h4 {
     fill: var(--bg-loader);
     width: 100px;
     animation: scroll 1.5s infinite;
-} */
+}
 
 ::-webkit-scrollbar {
     width: 12px;
