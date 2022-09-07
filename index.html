@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Shop</title>
+    <link href="./favicon/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section class="load" id="load">
+        <img src="./images/Ripple-1s-200px.svg" alt="loading...">
+    </section>
+    <header class="header scroll-header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav-logo">
+                <img src="./images/icons8-lápiz-labial-100.png" alt="logo" class="nav-logi">
+                <h2>Beauty Store</h2>
+            </a>
+            <div id="nav-menu" class="nav-menu">
+                <a id="nav-close" href="#" class="nav-close">&#88;</a>
+                <ul>
+                    <li>
+                        <a href="#home" class="nlink">Home</a>
+                    </li>
+                    <li>
+                        <a href="#products" class="nlink">Products</a>
+                    </li>
+                </ul>                
+            </div>
+            <div class="nav-butns" id="container">
+            <div id="nav-tgl" class="nav-tgl">
+                <i class='bx bx-home-alt'></i>
+            </div>                
+            <div class="nav-shop" id="cart-shop">
+                <i class='bx bx-shopping-bag'></i>
+                <span id="cart-count" class="count">0</span>
+            </div>
+            <span id="darkToggle" class="darkToggle">🌒</span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section id="home" class="home">
+            <div class="home-cont cont">
+                <div class="home-img-cont">
+                    <img src="./images/lipstick.png" alt="lip-promo" class="home-img">
+                </div>
+                <div class="home-info">
+                    <h2 class="home-title">New Collection!</h2>
+                    <h1 class="home-title">LIPSTICK BOOMCHIK</h1>
+                    <P class="home-text">Latest arrival of the new Hollywood Lipstick Boomchik imported from the 2022 series, with a delicious smell and cover.</P>
+                    <span class="home-cost">$20.00</span>
+                    <div class="home-btns">
+                        <a href="#" class="button button-secondary small">See more</a>
+                        <button class="button home-button">ADD TO CART</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section id="products" class="products">
+            <div class="cont">
+                <ul class="prod-filters">
+                    <li class="prod-item line" data-filter="all">
+                        <h3 class="prod-title">ALL</h3>
+                        <span class="prod-stock">Show all products</span>
+                    </li>
+                    <li class="prod-item line" data-filter=".lipstick">
+                        <h3 class="prod-title">LIPSTICKS</h3>
+                        <span class="prod-stock">Show 2 products</span>
+                    </li>
+                    <li class="prod-item line" data-filter=".eyeshadow">
+                        <h3 class="prod-title">EYESHADOWS</h3>
+                        <span class="prod-stock">Show 1 product</span>
+                    </li>
+                    <li class="prod-item line" data-filter=".perfume">
+                        <h3 class="prod-title">PERFUMES</h3>
+                        <span class="prod-stock">Show 1 product</span>
+                    </li>
+                </ul>
+                <div class="prod-cont" id="prodCont">
+                    <article class="prod-card lipstick" id="1">
+                        <div class="prod-shape">
+                            <img src="./images/Lipstick-PNG-Transparent-Image.png" alt="lips1" class="prod-img">
+                        </div>
+                        <div class="prod-info">
+                            <h2 class="prod-cost">$25.00
+                                <span class="prod-quantity">| Stock: 8</span>
+                            </h2>
+                            <h3 class="prod-name">Shock Red</h3>
+                            <button class="button prod-btn" id="1">
+                                <i class="bx bx-plus btn_add"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="prod-card eyeshadow" id="2">
+                        <div class="prod-shape">
+                            <img src="./images/590-5906868_ruby-obsessions-eyeshadow-palette.png" alt="eyes" class="prod-img">
+                        </div>
+                        <div class="prod-info">
+                            <h2 class="prod-cost">$50.00
+                                <span class="prod-quantity">| Stock: 10</span>
+                            </h2>
+                            <h3 class="prod-name">Perfect Pallete</h3>
+                            <button class="button prod-btn" id="2">
+                                <i class="bx bx-plus btn_add"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="prod-card perfume" id="3">
+                        <div class="prod-shape">
+                            <img src="./images/perfume_PNG10264.png" alt="perfume" class="prod-img">
+                        </div>
+                        <div class="prod-info">
+                            <h2 class="prod-cost">$100.00
+                                <span class="prod-quantity">| Stock: 2</span>
+                            </h2>
+                            <h3 class="prod-name">Anns Paris</h3>
+                            <button class="button prod-btn" id="3">
+                                <i class="bx bx-plus btn_add"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart-close"></i>
+        <h2 class="cart__title-center">My Cart</h2>
+        <div class="cart__container">
+        </div>
+        <div class="cart__prices">
+            <span class="cart__prices-item">
+                <span id="items-count"></span>
+                items
+            </span>
+            <span class="cart__prices-total" id="cart-total"></span>
+        </div>
+        <div class="cart__checkout">
+            <button class="cart__btn del-all" id="cart-checkout">Deshacer</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-cont cont">
+            <div class="footer-block">
+                <h3 class="footer-title">About us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a class="footer-link" href="#home">About Us</a>
+                    </li>
+                    <li>
+                        <a class="footer-link" href="#home">Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-block">
+                <h3 class="footer-title">Products</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a class="footer-link" href="#products">Lipsticks</a>
+                    </li>
+                </ul>
+                <ul class="footer-links">
+                    <li>
+                        <a class="footer-link" href="#products">Eyeshadows</a>
+                    </li>
+                </ul>
+                <ul class="footer-links">
+                    <li>
+                        <a class="footer-link" href="#products">Perfumes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-block">
+                <h3 class="footer-title">Contact Us</h3>
+                <p class="footer-info">Tras 48 # 85-98</p>
+                <p class="footer-info">Medellín, Antioquia</p>
+                <p class="footer-info">Tel: +57 6046589748</p>
+            </div>
+            <div class="footer-block">
+                <h3 class="footer-title">Social</h3>
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://www.facebook.com/" class="footer-soc-link">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" class="footer-soc-link">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" class="footer-soc-link">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <span class="footer-terms">© ACADEMLO. All rigths reserved</span>
+    </footer> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
